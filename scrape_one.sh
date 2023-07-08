@@ -1,0 +1,22 @@
+curl $'https://caeducation.sharepoint.com/sites/SBEPublicComments/_api/web/GetList(@v1)/RenderExtendedListFormData(itemId=ITEM_ID,formId=\'editform\',mode=\'2\',options=30,cutoffVersion=0)?@v1=%27%2Fsites%2FSBEPublicComments%2FLists%2FSBE%20Public%20Comments%27' \
+  -X 'POST' \
+  -H 'authority: caeducation.sharepoint.com' \
+  -H 'accept: application/json;odata=verbose' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'collectspperfmetrics: SPSQLQueryCount' \
+  -H 'content-length: 0' \
+  -H 'content-type: application/json;odata=verbose' \
+  -H 'cookie: REDACTED' \
+  -H 'origin: https://caeducation.sharepoint.com' \
+  -H 'referer: https://caeducation.sharepoint.com/sites/SBEPublicComments/Lists/SBE%20Public%20Comments/CommentsAtAGlance.aspx' \
+  -H 'sec-ch-ua: REDACTED' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: REDACTED' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: REDACTED' \
+  -H 'x-requestdigest: REDACTED' \
+  -H 'x-sp-requestresources: listUrl=%2Fsites%2FSBEPublicComments%2FLists%2FSBE%20Public%20Comments' \
+  --compressed \
+  > raw_data/ITEM_ID.json
