@@ -17,8 +17,6 @@ def main(filepaths):
                 continue
 
             for attachment in attachments["Attachments"]:
-                if not ' ' in attachment["FileName"]:
-                    continue
                 command = (
                     FETCH_ATTACHMENT_COMMAND.replace(
                         "URL_PREFIX", attachments["UrlPrefix"].replace(' ', '%20')

@@ -14,15 +14,16 @@ def make_attachment_link(p, idx):
         return ""
 
     filename = attachments["Attachments"][idx]["FileName"]
-    return f"https://github.com/minilek/cmfv3_public_comment/blob/main/attachments/{id}_{filename}"
+    return f"https://github.com/minilek/cmfv3_public_comment/blob/master/attachments/{id}_{filename}"
 
 
 FIELDS = [
     ("Name", lambda p: p["ListData"]["Name"]),
     ("Organization", lambda p: p["ListData"]["Organization"]),
-    ("Email", lambda p: p["ListData"]["Name"]),
+    ("Email", lambda p: p["ListData"]["Email"]),
     ("Topic", lambda p: p["ListData"]["Topic"]),
     ("Stance", lambda p: p["ListData"]["StanceontheMatter"]),
+    ("Comment", lambda p: p["ListData"]["Comments"]),
     ("Title", lambda p: p["ListData"]["Title"]),
     ("Created at", lambda p: p["ListData"]["Created"]),
     ("Attachment 1 Link", lambda p: make_attachment_link(p, idx=0)),
